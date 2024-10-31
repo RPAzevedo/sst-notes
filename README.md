@@ -157,3 +157,36 @@ Making API request
   }
 }
 ```
+
+### Test the Billing API
+
+```bash
+$ npx aws-api-gateway-cli-test \
+   --username='admin@example.com' \
+   --password='Passw0rd!' \
+   --user-pool-id='<USER_POOL_ID>' \
+   --app-client-id='<USER_POOL_CLIENT_ID>' \
+   --cognito-region='<COGNITO_REGION>' \
+   --identity-pool-id='<IDENTITY_POOL_ID>' \
+   --invoke-url='<API_ENDPOINT>' \
+   --api-gateway-region='<API_REGION>' \
+   --path-template='/billing' \
+   --method='POST' \
+   --body='{"source":"tok_visa","storage":21}'
+```
+
+```text
+npx aws-api-gateway-cli-test \
+   --username='admin@example.com' \
+   --password='Passw0rd!' \
+   --user-pool-id='ap-southeast-2_iBKiZdNsx' \
+   --app-client-id='9ui8ca52cskupth1gubbm1l9m' \
+   --cognito-region='ap-southeast-2' \
+   --identity-pool-id='ap-southeast-2:cab2002b-314e-47c9-a67b-37616d3e7667' \
+   --invoke-url='https://clspnpviac.execute-api.ap-southeast-2.amazonaws.com' \
+   --api-gateway-region='ap-southeast-2' \
+   --path-template='/billing' \
+   --method='POST' \
+   --body='{"source":"tok_visa","storage":21}'
+```
+
