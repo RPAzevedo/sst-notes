@@ -190,3 +190,9 @@ npx aws-api-gateway-cli-test \
    --body='{"source":"tok_visa","storage":21}'
 ```
 
+### Billing Logic
+
+```bash
+$ cd packages/core
+$ pnpm test
+```
